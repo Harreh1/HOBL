@@ -1,0 +1,7 @@
+{
+  "name": "Monstero",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
