@@ -4,16 +4,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-img width="80" height="80" [src]="monsterImage"></ion-img>
+<ion-content  padding>
+  <div class="screen">
+    
+  <ion-img id="monsterPic" width="80" height="80" [src]="monsterImage"></ion-img>
   
   <progress-bar [progress]="loadProgress"></progress-bar>
 
-  <ion-card *ngIf="data">
+  <!-- <ion-card *ngIf="data">
     <ion-card-content>
       <h2>X: {{data.x | number:'1.4-4'}}</h2>
       <h2>Y: {{data.y | number:'1.4-4'}}</h2>
       <h2>Z: {{data.z | number:'1.4-4'}}</h2>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
+
+  <button style="margin-left:33%;"ion-button (click)="changePage($event)" color="light">Stats</button>
+</div>
+  
 </ion-content>

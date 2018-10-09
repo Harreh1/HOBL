@@ -6,12 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { StatsPage } from '../pages/stats/stats';
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    StatsPage,
     ProgressBarComponent
   ],
   imports: [
@@ -21,12 +24,14 @@ import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    StatsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NativePageTransitions
   ]
 })
 export class AppModule {}
