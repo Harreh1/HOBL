@@ -17,7 +17,12 @@ export class HomePage {
 	loadProgress: number;
 	levelUp: number;
 	level: number;
-	monsterImage: string;
+	currentMonster: string;
+	monsterImage1: string;
+	monsterImage2: string;
+	monsterImage3: string;
+	monsterImage4: string;
+
 	constructor(private navCtrl : NavController, private nativePageTransition: NativePageTransitions){ 
 		this.startWatching()
 		this.progress = 0;
@@ -25,7 +30,13 @@ export class HomePage {
 		this.levelUp = 500;
 		this.level = 1;
 		this.counter = 0;
-		this.monsterImage = "../../assets/imgs/mini_monster_slug.jpg";
+		this.monsterImage1 = "../../assets/imgs/Egg v1.1.gif";
+		this.monsterImage2 = "../../assets/imgs/half hatched.gif";
+		this.monsterImage3 = "../../assets/imgs/baby.gif";
+		this.monsterImage4 = "../../assets/imgs/Monster 1.gif";
+		this.updateMonster();
+
+
 	}
 
 	changePage(){
@@ -61,17 +72,31 @@ export class HomePage {
 
 			if(this.progress > this.levelUp){
 				this.progress = 0;
-				this.levelUp +=1;
-				if(this.monsterImage == "../../assets/imgs/WormMonster_icon.jpg"){
-					this.monsterImage = "../../assets/imgs/mini_monster_slug.jpg";
-				} else {
-					this.monsterImage = "../../assets/imgs/WormMonster_icon.jpg";
-				}
+				this.level +=1;
+				this.levelUp *=2;
+				this.updateMonster();
 			}
 			this.loadProgress = Math.round(this.progress/this.levelUp * 100 *100) / 100;
 			this.data = acceleration;
 		});
+	}
+	  
+	updateMonster(){
+		switch(this.level){
+			case 1:
+				this.currentMonster = this.monsterImage1;
+				break;
+			case 2:
+				this.currentMonster = this.monsterImage2;
+				break;		
+			case 3:
+				this.currentMonster = this.monsterImage3;
+				break;
+			case 4:
+				this.currentMonster = this.monsterImage4;
+				break;
+		}
+	}
 
-  }
   
 }

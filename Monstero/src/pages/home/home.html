@@ -6,9 +6,10 @@
 
 <ion-content  padding>
   <div class="screen">
-    
-  <ion-img id="monsterPic" width="80" height="80" [src]="monsterImage"></ion-img>
-  
+    <div class = "monsterImage">
+      <img id="monsterPic" width="100%" [src]="currentMonster">
+    </div>  
+
   <progress-bar [progress]="loadProgress"></progress-bar>
 
   <!-- <ion-card *ngIf="data">
@@ -19,7 +20,7 @@
     </ion-card-content>
   </ion-card> -->
 
-  <button style="margin-left:33%;"ion-button (click)="changePage($event)" color="light">Stats</button>
+  <button id="statsbutton" ion-button (click)="changePage($event)" color="light">Stats</button>
 </div>
   
 </ion-content>
