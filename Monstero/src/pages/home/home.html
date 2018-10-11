@@ -6,7 +6,8 @@
 
 <ion-content  padding>
   <div class="screen">
-    
+  <div id="hatLocation" style="width:50px;height:50px;">
+  </div>  
   <ion-img id="monsterPic" width="80" height="80" [src]="monsterImage"></ion-img>
   
   <progress-bar [progress]="loadProgress"></progress-bar>
@@ -21,6 +22,7 @@
 
   <button style="margin-left:33%;"ion-button (click)="changePage($event)" color="light">Stats</button>
   <button style="margin-left:33%;"ion-button (click)="changePageAccessories($event)" color="primary">Accessories</button>
+  <button style="margin-left:33%;"ion-button (click)="getHatValue($event)" color="primary">Hat</button>
 </div>
   
 </ion-content>

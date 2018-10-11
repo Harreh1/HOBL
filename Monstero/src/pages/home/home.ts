@@ -1,8 +1,9 @@
 import { Component, transition } from '@angular/core';
 import { NavController } from 'ionic-angular';
 // import { DeviceMotion, DeviceMotionAccelerationData, DeviceMotionAccelerometerOptions } from 'ionic-native';
-import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+// import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { StatsPage } from '../stats/stats';
+import { GlobalProvider } from "../../providers/global/global";
 import { AccessoriesPage } from '../accessories/accessories';
 
 @Component({
@@ -19,7 +20,7 @@ export class HomePage {
 	levelUp: number;
 	level: number;
 	monsterImage: string;
-	constructor(private navCtrl : NavController, private nativePageTransition: NativePageTransitions){ 
+	constructor(private navCtrl : NavController,public global:GlobalProvider/**, private nativePageTransition: NativePageTransitions**/){ 
 		// this.startWatching()
 		this.progress = 0;
 		this.loadProgress = 0;
@@ -27,6 +28,21 @@ export class HomePage {
 		this.level = 1;
 		this.counter = 0;
 		this.monsterImage = "../../assets/imgs/mini_monster_slug.jpg";
+	}
+
+	getHatValue(){
+		alert(this.global.hatValue);
+		var elem = document.createElement("img");
+		if(this.global.hatValue == "santa"){
+			elem.src = "../../assets/imgs/santa-claus.png";
+			document.getElementById("hatLocation").appendChild(elem);
+		} else if (this.global.hatValue == "knit"){
+			elem.src = "../../assets/imgs/knit-hat.png";
+			document.getElementById("hatLocation").appendChild(elem);
+		}else if (this.global.hatValue == "witch"){
+			elem.src = "../../assets/imgs/witch-hat.png";
+			document.getElementById("hatLocation").appendChild(elem);
+		}
 	}
 
 	changePage(){

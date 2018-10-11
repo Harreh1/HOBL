@@ -7,7 +7,19 @@ import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
+
+
 export class MyApp {
+  private _thingy: MyApp;
+
+  getThingy(): MyApp {
+    return this._thingy;
+  }
+
+  setThingy(thingy:MyApp) {
+    this._thingy = thingy;
+  }
+
   rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

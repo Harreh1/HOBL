@@ -10,6 +10,7 @@ import { StatsPage } from '../pages/stats/stats';
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { AccessoriesPage } from '../pages/accessories/accessories';
+import { GlobalProvider } from '../providers/global/global';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AccessoriesPage } from '../pages/accessories/accessories';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NativePageTransitions
+    NativePageTransitions,
+    GlobalProvider
   ]
 })
 export class AppModule {}

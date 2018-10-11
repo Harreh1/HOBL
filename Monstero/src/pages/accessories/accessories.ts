@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { GlobalProvider } from "../../providers/global/global";
 /**
  * Generated class for the AccessoriesPage page.
  *
@@ -15,7 +15,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AccessoriesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public global: GlobalProvider) {
+  }
+
+  setSantaHatValue(){
+    this.setHatToGlobal("santa");
+  }
+
+  setWitchHatValue(){
+    this.setHatToGlobal("witch")
+  }
+
+  setKnitHatValue(){
+    this.setHatToGlobal("knit");
+  }
+
+  setHatToGlobal(hat){
+    this.global.hatValue = hat; 
   }
 
   ionViewDidLoad() {
