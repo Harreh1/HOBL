@@ -9,12 +9,14 @@ import { HomePage } from '../pages/home/home';
 import { StatsPage } from '../pages/stats/stats';
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+import { AccessoriesPage } from '../pages/accessories/accessories';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     StatsPage,
+    AccessoriesPage,
     ProgressBarComponent
   ],
   imports: [
@@ -25,7 +27,8 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
   entryComponents: [
     MyApp,
     HomePage,
-    StatsPage
+    StatsPage,
+    AccessoriesPage
   ],
   providers: [
     StatusBar,

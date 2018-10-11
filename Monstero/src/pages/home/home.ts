@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { DeviceMotion, DeviceMotionAccelerationData, DeviceMotionAccelerometerOptions } from 'ionic-native';
 import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { StatsPage } from '../stats/stats';
+import { AccessoriesPage } from '../accessories/accessories';
 
 @Component({
   selector: 'page-home',
@@ -39,7 +40,10 @@ export class HomePage {
 		// this.navCtrl.setRoot(StatsPage);
 		this.navCtrl.push(StatsPage);
 	}
-	
+	changePageAccessories(){
+		this.navCtrl.push(AccessoriesPage);
+	}
+
 	startWatching(){
 		var options: DeviceMotionAccelerometerOptions = {
 			frequency: 400
