@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Monstero</ion-title>
+    </ion-toolbar>
+</ion-header>
+  
+  <ion-content  padding>
+    <div class="screen">
+      <div id="hatLocation">
+          <!-- style="width:50px;height:50px;" -->
+      </div>  
+      <div class = "monsterImage">
+        <img id="monsterPic" width="100%" [src]="currentMonster">
+      </div>  
+  
+    <progress-bar [progress]="loadProgress"></progress-bar>
+  
+    <!-- <ion-card *ngIf="data">
+      <ion-card-content>
+        <h2>X: {{data.x | number:'1.4-4'}}</h2>
+        <h2>Y: {{data.y | number:'1.4-4'}}</h2>
+        <h2>Z: {{data.z | number:'1.4-4'}}</h2>
+      </ion-card-content>
+    </ion-card> -->
+  
+      <button id="statsbutton" ion-button (click)="changePage($event)" >Stats</button>
+      <button id="accessoriesButton" ion-button (click)="changePageAccessories($event)" >Accessories</button>
+    </div>
+  </ion-content>

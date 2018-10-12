@@ -1,0 +1,48 @@
+<!--
+  Generated template for the AccessoriesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>accessories</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <div class="screen">
+      <h1 style="text-align: center">Accessories</h1>
+      <ion-list>
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img (click)="setSantaHatValue($event)" style="max-width:100%; max-height: 100%;" src="../../assets/imgs/santa-claus.png">
+            </ion-thumbnail> 
+            <h2>Unlock after </h2>
+            <h2>having 5 friends</h2>
+            <!-- <button ion-button clear item-end>View</button> -->
+          </ion-item>
+          <ion-item>
+              <ion-thumbnail item-start>
+                <img (click)="setWitchHatValue($event)" style="max-width:100%; max-height: 100%;" src="../../assets/imgs/witch-hat.png">
+              </ion-thumbnail>
+              <h2>Unlock after </h2>
+            <h2>having 10 friends</h2>
+              <!-- <button ion-button clear item-end>View</button> -->
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                  <img (click)="setKnitHatValue($event)" style="max-width:100%; max-height: 100%;" src="../../assets/imgs/knit-hat.png">
+                </ion-thumbnail>
+                <h2>Unlock after </h2>
+                <h2>having 15 friends</h2>
+                <!-- <button ion-button clear item-end>View</button> -->
+              </ion-item>
+            
+        </ion-list>
+      </div>
+  
+  </ion-content>

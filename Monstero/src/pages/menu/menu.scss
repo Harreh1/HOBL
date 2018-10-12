@@ -1,0 +1,44 @@
+page-menu {
+
+    .scroll-content{
+        background: black;
+    }
+    
+    .screen{
+        background: white;
+        width: 284px;
+        height: 350px;
+        border-radius: 20px 20px 20px 20px;
+        overflow: auto;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+    }
+    
+    #monsterPic{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 180px;
+        height: 230px;
+    }
+    
+    #statsbutton{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    .monsterImage .ion-img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    .ionPage{
+        background:black;
+    }
+    
+    .img{
+        width: 200px;
+    }
+}
