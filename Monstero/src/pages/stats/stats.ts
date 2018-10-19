@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MonsterPage } from '../monster/monster';
 
 /**
  * Generated class for the StatsPage page.
@@ -16,6 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class StatsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  changePage(){
+    this.navCtrl.push(MonsterPage);
   }
 
   ionViewDidLoad() {

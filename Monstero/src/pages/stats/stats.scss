@@ -14,4 +14,15 @@ page-stats {
         position: absolute;
         top: 0; left: 0; bottom: 0; right: 0;
     }
+
+    
+    #backBtn{
+        display: inline-block;
+        font-size: 2.1em;
+        color: grey;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
 }

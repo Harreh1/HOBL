@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GlobalProvider } from "../../providers/global/global";
+import { MonsterPage } from '../monster/monster';
 
 
 /**
@@ -18,6 +19,10 @@ import { GlobalProvider } from "../../providers/global/global";
 export class AccessoriesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public global: GlobalProvider) {
+  }
+
+  changePage(){
+    this.navCtrl.push(MonsterPage);
   }
 
   setSantaHatValue(){
