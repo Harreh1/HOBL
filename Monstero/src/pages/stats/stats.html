@@ -15,7 +15,7 @@
 <ion-content padding>
   <div class="screen">
   <ion-icon id="backBtn" (click)="changePage($event)" name="arrow-dropleft-circle"></ion-icon>
-  <h1 style="padding-left:10px; padding-top:5px; text-align: center"> Monster Stats </h1>
+  <h1 style="text-align: center"> Monster Stats </h1>
   <ion-list>
       <ion-item>
         <!-- <ion-thumbnail item-start>
@@ -29,24 +29,24 @@
           <!-- <ion-thumbnail item-start>
             <img style="max-width:70%; max-height: 70%;" src="../../assets/imgs/mini_monster_slug.jpg">
           </ion-thumbnail> -->
-          <h2>Health</h2>
-          <p>Extremely healthy</p>
-          <!-- <button ion-button clear item-end>View</button> -->
-        </ion-item>
-        <ion-item>
-          <!-- <ion-thumbnail item-start>
-            <img style="max-width:70%; max-height: 70%;" src="../../assets/imgs/mini_monster_slug.jpg">
-          </ion-thumbnail> -->
-          <h2>Weight</h2>
-          <p>20kg</p>
+          <h2>Energy</h2>
+          <p>{{energy}}</p>
           <!-- <button ion-button clear item-end>View</button> -->
       </ion-item>
       <ion-item>
           <!-- <ion-thumbnail item-start>
             <img style="max-width:70%; max-height: 70%;" src="../../assets/imgs/mini_monster_slug.jpg">
           </ion-thumbnail> -->
+          <h2>Hunger</h2>
+          <p>{{hunger}}</p>
+          <!-- <button ion-button clear item-end>View</button> -->
+        </ion-item>
+      <ion-item>
+          <!-- <ion-thumbnail item-start>
+            <img style="max-width:70%; max-height: 70%;" src="../../assets/imgs/mini_monster_slug.jpg">
+          </ion-thumbnail> -->
           <h2>Strength</h2>
-          <p>200cp</p>
+          <p>{{power}}</p>
           <!-- <button ion-button clear item-end>View</button> -->
       </ion-item>
     </ion-list>

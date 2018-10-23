@@ -5,6 +5,9 @@ import { StatsPage } from '../stats/stats';
 import { MonsterPage } from '../monster/monster';
 import { AccessoriesPage } from '../accessories/accessories'
 import { MenuPage } from '../menu/menu'
+import { GlobalProvider } from "../../providers/global/global";
+import { global } from '@angular/core/src/util';
+
 
 /**
  * Generated class for the EggSelectPage page.
@@ -19,19 +22,25 @@ import { MenuPage } from '../menu/menu'
   templateUrl: 'egg-select.html',
 })
 export class EggSelectPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public global: GlobalProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EggSelectPage');
   }
 
-	nextPage(){
-		this.navCtrl.push(StatsPage);
-  }
-
-  nextPage2(){
+	nextPage1(){
+    this.global.monsterType = 1;
     this.navCtrl.setRoot(MonsterPage);
   }
 
+  nextPage2(){
+    this.global.monsterType = 2;
+    this.navCtrl.setRoot(MonsterPage);
+  }
+
+  nextPage3(){
+    this.global.monsterType = 3;
+    this.navCtrl.setRoot(MonsterPage);
+  }
 }

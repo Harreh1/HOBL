@@ -17,29 +17,79 @@ import { MonsterPage } from '../monster/monster';
   templateUrl: 'accessories.html',
 })
 export class AccessoriesPage {
-
+  santa1: string;
+  santa2: string;
+  witch1: string;
+  witch2: string;
+  knit1: string;
+  knit2: string;
   constructor(public navCtrl: NavController, public navParams: NavParams,public global: GlobalProvider) {
+    if(global.friendNum < 1){
+      this.santa1 = "Unlocked after";
+      this.santa2 = "1 friend"
+    } else {
+      this.santa1 = "Tap icon to equip"
+    }
+    if(global.friendNum < 3){
+      this.witch1 = "Unlocked after";
+      this.witch2 = "3 friends"
+    } else {
+      this.witch1 = "Tap icon to equip"
+    }
+    if(global.friendNum < 5){
+      this.knit1 = "Unlocked after";
+      this.knit2 = "5 friends"
+    } else {
+      this.knit1 = "Tap icon to equip"
+    }
+    if(this.global.energy <2){
+      this.global.energy+=1;
+    }
+    if(this.global.hungriness > 0){
+      this.global.hungriness -=1;
+    }
   }
 
   changePage(){
-    this.navCtrl.push(MonsterPage);
+    this.navCtrl.pop();
   }
 
   setSantaHatValue(){
-    this.setHatToGlobal("santa");
+    if(this.global.friendNum > 0){
+      if(this.global.hatValue == "santa"){
+        this.setHatToGlobal("");
+      }
+      else{
+        this.setHatToGlobal("santa");
+      }
+    }
   }
 
   setWitchHatValue(){
-    this.setHatToGlobal("witch")
+    if(this.global.friendNum > 2){
+      if(this.global.hatValue == "witch"){
+        this.setHatToGlobal("");
+      } 
+      else {
+        this.setHatToGlobal("witch")
+      }
+    }
   }
 
   setKnitHatValue(){
-    this.setHatToGlobal("knit");
+    if(this.global.friendNum > 4){
+      if(this.global.hatValue == "knit"){
+        this.setHatToGlobal("");
+      } else{
+        this.setHatToGlobal("knit");
+      }
+    }
   }
 
   setHatToGlobal(hat){
     this.global.hatValue = hat; 
     this.global.actionRequired = 1;
+    this.navCtrl.pop();
   }
 
   ionViewDidLoad() {

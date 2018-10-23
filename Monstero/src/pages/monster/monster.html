@@ -21,9 +21,19 @@
         <h2>Y: {{data.y | number:'1.4-4'}}</h2>
         <h2>Z: {{data.z | number:'1.4-4'}}</h2>
       </ion-card-content>
-    </ion-card> -->
-  
-      <button id="statsbutton" ion-button (click)="changePage($event)" >Stats</button>
+    </ion-card> -->   
+      <ion-item >
+        <ion-label>Menu</ion-label>
+        <ion-select [(ngModel)]="actions" (ionChange)="onSelectChange($event)">
+          <ion-option value="s">Stats</ion-option>
+          <ion-option value="f">Friends</ion-option>
+          <ion-option value="a">Accessories</ion-option>
+          <ion-option value="g">Catch The Food Game</ion-option>
+        </ion-select>
+      </ion-item>
+      <!-- <button id="statsbutton" ion-button (click)="changePage($event)" >Stats</button>
+      <button id="friendsButton" ion-button (click)="changePage3($event)" >Friends</button>
       <button id="accessoriesButton" ion-button (click)="changePageAccessories($event)" >Accessories</button>
+      <button id="" ion-button (click)="changePageGame($event)" >Game</button> -->
     </div>
   </ion-content>

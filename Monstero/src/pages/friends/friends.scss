@@ -1,5 +1,4 @@
-page-stats {
-
+page-friends {
     .scroll-content{
         background: black;
     }
@@ -13,9 +12,9 @@ page-stats {
         margin: auto;
         position: absolute;
         top: 0; left: 0; bottom: 0; right: 0;
+        
     }
 
-    
     #backBtn{
         display: inline-block;
         font-size: 2.1em;
@@ -25,4 +24,9 @@ page-stats {
         left: 10px;
     }
 
+    #addFriend{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 }

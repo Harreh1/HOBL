@@ -14,6 +14,8 @@ import { GlobalProvider } from '../providers/global/global';
 import { AccessoriesPage } from '../pages/accessories/accessories';
 import { MonsterPage } from '../pages/monster/monster';
 import { MenuPage } from '../pages/menu/menu';
+import { FriendsPage } from '../pages/friends/friends';
+import { GamePage } from '../pages/game/game';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MenuPage } from '../pages/menu/menu';
     ProgressBarComponent,
     AccessoriesPage,
     MonsterPage,
-    MenuPage
+    MenuPage,
+    FriendsPage,
+    GamePage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { MenuPage } from '../pages/menu/menu';
     EggSelectPage,
     AccessoriesPage,
     MonsterPage,
-    MenuPage
+    MenuPage,
+    FriendsPage,
+    GamePage
   ],
   providers: [
     StatusBar,
