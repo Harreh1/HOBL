@@ -3,8 +3,8 @@ Monstero is a wearable that aims to improve kids self esteem by encouraging them
 # Project Proposal Link:
 https://github.com/deco3500-2018/HOBL/wiki
 
-# Initial Workflow Link:
-https://xd.adobe.com/view/5d43cceb-6912-4421-5d01-a1100ae4fbcb-2b72/
+# Promotional Poster:
+![monstero](https://github.com/deco3500-2018/HOBL/blob/master/Monstero_Poster.jpg)
 
 # Promotional Website:
 https://goo.gl/XxgXow
