@@ -9,6 +9,15 @@ https://xd.adobe.com/view/5d43cceb-6912-4421-5d01-a1100ae4fbcb-2b72/
 # Promotional Website:
 https://goo.gl/XxgXow
 
+# Prototype deploy guide
+The prototype can be tested from the link provided below as it is hosted online or you can download the apk to run it on an android phone. 
+https://appetize.io/app/yujez6u1ycu4grxhfnw051mam0?device=nexus5&scale=75&orientation=portrait&osVersion=7.1
+(Press on the spinning function to simulate the moving action)
+Ionic run guide can be find from the link below
+https://ionicframework.com/getting-started#cli
+However, due to native functions accelerometer being implemented it can only be run after it is being deployed. Which the line of code to be run is 
+`ionic cordova run android`
+
 # Our team consists of:
 * Ong Tee Han (Davies) - Bachelor of Information Technology
 * Harrison Lucas - Bachelor of Information Technology
