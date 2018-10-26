@@ -6,6 +6,9 @@ https://github.com/deco3500-2018/HOBL/wiki
 # Initial Workflow Link:
 https://xd.adobe.com/view/5d43cceb-6912-4421-5d01-a1100ae4fbcb-2b72/
 
+# Promotional Website:
+goo.gl/XxgXow
+
 # Our team consists of:
 * Ong Tee Han (Davies) - Bachelor of Information Technology
 * Harrison Lucas - Bachelor of Information Technology
